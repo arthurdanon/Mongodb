@@ -3,6 +3,10 @@
 
 1 - Création de l'espace Atlas MongoDB
 
+- Création de l'espace
+- Création des autorisation
+- Choix des serveur d'herbergem
+
 2 - instalation de compass
 
 3 - Integration de la base de donnée .restaurant
@@ -22,3 +26,5 @@
 
 
 # Création de l'espace Atlas MongoDB
+- Création de l'espace 
+![
