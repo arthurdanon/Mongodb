@@ -1,19 +1,18 @@
 ## Summary
 
 
-1 - Création de l'espace Atlas MongoDB
-- Création de l'espace
+1 - MongoDB sur Atlas
+- Création de l'espace /création des droits
 - Création de la Database
-- Création des autorisation
 - Choix des serveur d'herbergemt
+- Choix du pays du serveur
+- Création d'un acces utilisateur / Création d'un white list IP
+- Création d'un cluster
+- Choix de Connection au cluster 
+- Import de la BDD dans le cluster en shell
+- Affichage de la BDD via Compass
 
-2 - instalation de compass
-
-3 - Integration de la base de donnée .restaurant
-
-4 - Shell
-
-5 - index
+2 - index
 
 6 - Operateur
 
