@@ -2,10 +2,10 @@
 
 
 1 - Création de l'espace Atlas MongoDB
-    - Création de l'espace
-    - Création de la Database
-    - Création des autorisation
-    - Choix des serveur d'herbergemt
+- Création de l'espace
+- Création de la Database
+- Création des autorisation
+- Choix des serveur d'herbergemt
 
 2 - instalation de compass
 
