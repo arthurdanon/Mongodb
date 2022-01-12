@@ -2,8 +2,8 @@
 
 
 1 - Création de l'espace Atlas MongoDB
-
 - Création de l'espace
+- Création de la Database
 - Création des autorisation
 - Choix des serveur d'herbergem
 
@@ -29,5 +29,6 @@
 
 # Création de l'espace Atlas MongoDB
 - Création de l'espace 
-![![1](https://user-images.githubusercontent.com/65304878/149127230-9d180b9a-3d0f-4ea5-8da3-21fc9a6b531f.JPG)
+
+![1](https://user-images.githubusercontent.com/65304878/149127230-9d180b9a-3d0f-4ea5-8da3-21fc9a6b531f.JPG)
 
