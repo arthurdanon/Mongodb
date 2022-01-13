@@ -95,34 +95,29 @@ Les index créent une copie d'un segment de votre donnée, parfois dans un ordre
 
 
 ## Commande Mongodb
--Création de notre collection clients
+- Création de notre collection clients
 ```db.createCollection("clients")```
 
--Création de documents
-
-
+- Création de documents
 ```
-db.avignon.insertMany([{ 
-   "nom": "Palais des Papes", 
-   "localisation": { 
-       "coordinates": [43.9507, 4.8075], 
-       "type": "Point" 
-   } 
+db.client.insertMany([{ 
+   "nom": "Danon", 
+   "prenom": "Arthur"
 }, 
 { 
-   "nom": "Pont Saint-Bénézet", 
-   "localisation": { 
-       "coordinates": [43.95397, 4.80478], 
-       "type": "Point" 
-   } 
+   "nom": "Le moine seronie", 
+   "prenom": "Adrien"
 }, 
 { 
-   "nom": "Collection Lambert", 
-   "localisation": { 
-       "coordinates": [43.944787, 4.804031], 
-       "type": "Point" 
-   } 
+   "nom": "Klein", 
+   "prenom": "Nicolas"
 }])
+```
+
+- Update
+* Cela ajoute field Age de 20 a tous le monde *
+```
+db.client.updateMany({}, {$set: {"Age":20}})
 ```
 
 
