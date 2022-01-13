@@ -114,10 +114,21 @@ db.client.insertMany([{
 }])
 ```
 
-- Update
+- Update<br>
 *Cela ajoute le field Age : 20 a tous les documents*
 ```
 db.client.updateMany({}, {$set: {"Age":20}})
+```
+
+*Cela actualise le field Age : 30 a Nicolas*
+```
+db.client.updateMany({}, {$set: {"Age":20}})
+```
+
+- Find <br>
+*Cela permet de rechercher dans notre collection*
+```
+db.restaurants.find({"Name" : { $eq : "40356442" }})
 ```
 
 
