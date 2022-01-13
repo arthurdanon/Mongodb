@@ -115,7 +115,7 @@ db.client.insertMany([{
 ```
 
 - Update
-* Cela ajoute field Age de 20 a tous le monde *
+*Cela ajoute le field Age : 20 a tous les documents*
 ```
 db.client.updateMany({}, {$set: {"Age":20}})
 ```
