@@ -88,7 +88,7 @@ La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisin
 ## Index
 - Création d'un index
 L'index permetra d'acroitre la rapidité et la simplicité des requetes sur la BDD ex: ``Nom`` et ``prenom``<br>
-```db.clients.createIndex({"nom":1, "prenom":1})``
+```db.clients.createIndex({"nom":1, "prenom":1})```
 
 
 
