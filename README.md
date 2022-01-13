@@ -2,7 +2,7 @@
 
 **INTRO** - Intro
 
-1 - MongoDB sur Atlas
+**1 - MongoDB sur Atlas**
 - Création de l'espace /création des droits
 - Création de la Database
 - Choix des serveur d'herbergemt
@@ -11,28 +11,32 @@
 - Création d'un cluster
 - Choix de Connection au cluster 
 
-2 - BDD
+2 - BDD**
 - Import de la BDD dans le cluster via le shell
 
-3 - IDE
+**3 - IDE**
 - Affichage de la BDD via Compass
 - Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
 
-4 - Index
+**4 - Index**
 - Création d'un index
 
-5 - Commande Mongodb
+**5 - Commande Mongodb**
 - Opérateurs
 - Création de notre collection clients
 - Création de documents
 - Find
 - Update
 
-6 - GeoJson
-- Utilisation
-- Posibilité
+**6 - Aggrégation**
+- Triage des ville
+- Calcule du prix des paniers en moyenne
+- Création d'une promotion si un clients viens le jour de son anniversaire
 
-7 - Aggrégation
+**7 - GeoJson**
+- Forme Possible
+
+
 
 
 * - Création de l'interface 
@@ -165,8 +169,99 @@ db.client.find({"prenom" : { $eq : "Arthur" }})
   age: 20 }
 ```
 
+## Aggregation
+- Triage des ville
+Dans notre project nous utiliserons les liens d'agragation de mongodb pour regrouper le nombre de clients par ville, pour savoir quel dans quelle ville nos boutique sont les plus rentable/ou pas.<br><<br>
+Pour cela nous additionons le nombre de points de fidelité des clients par ville.<br><br>
+Avec cela nous pouvons deduire le prix des panier moyen des clients par ville.<br>
+```
+db.client.aggregate([{
+  $group :{
+  _id: "$city",
+  countSmaller: { $sum : {$cond: [{ $lte : ["$points" , 250000]}, 1 , 0]}},
+  countBigger: { $sum : { $cond :[{$gt: ["points", 250000]}, 1,0]}}
+  }}])
+  
+```
+```
+{ _id: 'Lyon', countSmaller: 9172, countBigger: 36124 }
+{ _id: 'Paris', countSmaller: 9043, countBigger: 35876 }
+{ _id: 'Marseille', countSmaller: 8961, countBigger: 35735 }
+```
+
+- Calcule du prix des paniers en moyenne
+Ils nous est interessants de savoir le prix moyen pour cibler plus precisement nos prix et notre communication selon nos boutique.
+```
+db.clients.aggregate(
+   [
+     {
+       $project:
+         {
+           _id: "$idClient",
+           moyenPanier: { $avg: "$panier"  },
+         }
+     }, {
+         $group: {
+             _id: "_id",
+             moyenne : { $avg: "$moyenPanier"},
+         }
+     }
+   ]
+)
+```
+```
+[
+  {
+    "_id": "_id",
+    "moyenne": 46.66666666666667
+  }
+]
+```
+
+- Fidelistation
+Pour fideliser nos clients nous pouvons leurs emmetre un bon cadeau apres un nombre de passage depassé dans nos boutique.
+```
+db.clients.aggregate(
+   [
+     {
+       $project:
+         {
+           _id: "$idClient",
+           Nombreachat: { $size: "$panier"  },
+         }
+     }
+   ]
+)
+```
+
+```
+[
+  {
+    "_id": 656565,
+    "Nombreachat": 3
+  },
+  {
+    "_id": 606060,
+    "Nombreachat": 3
+  }
+]
+```
+
+- Création d'une promotion si un clients viens le jour de son anniversaire
+```
+db.clients.find({
+   "$expr": { 
+       "$and": [
+            { "$eq": [ { "$dayOfMonth": "$dob" }, { "$dayOfMonth": new Date() } ] },
+            { "$eq": [ { "$month"     : "$dob" }, { "$month"     : new Date() } ] }
+       ]
+    }
+})
+```
+
+
+
 ## GeoJson
-- Utilisation
 Nous aurons besoin de GeoJson dans notre project pour afficher une carte avec toute nos boutique, mais aussi a etablir un plan de route pour des livreur ex *ubereat*.<br>
 Des études de marchés peuvent etre faite suivant les zone geographique des boutiques.
 
@@ -195,7 +290,7 @@ db.boutique.insertMany([{
 ```
 ![12](https://user-images.githubusercontent.com/65304878/149370589-15d1aeb2-a1d9-4e02-b719-dc70a2cd8a43.png)
 
-- Posibilité
+- Forme possible
 
 *Point*<br>
 ```
