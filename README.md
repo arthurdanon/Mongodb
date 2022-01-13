@@ -39,7 +39,7 @@ Notre project consiste a rassembler les donnée personel de clients et créer pa
 - Création des regles permetant la manipulation des données dans mongodb
 - Creation d'un Dashboard de visualisation et statistique des données avec une API "en cours(optionel)"
 
-Nous créons une inscription automatic a chaque achat a un programme de fidelité.<br>
+Nous créons une inscription automatique a chaque passage en boutique a un programme de fidelité.<br>
 Ce programme de fidélité recuperera : ``Nom``, ``Prenom``, ``Email``, ``Date de naissance``, ``Adresse``, ``Pays``, ``Ville``, ``Sexe``, ``Status social``.<br>
 Nous Stockerons dans notre BDD, chaque donnée de passage en boutique.<br>
 Les Passages en boutique recuperera : ``Date``, ``Articles achetés``, ``Prix total``, ``Categorie de produit``, ``Nombre de point généré``.
