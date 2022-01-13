@@ -99,7 +99,10 @@ Les index créent une copie d'un segment de votre donnée, parfois dans un ordre
 ```db.createCollection("clients")```
 
 -Création de documents
-```db.avignon.insertMany([{ 
+
+
+```
+db.avignon.insertMany([{ 
    "nom": "Palais des Papes", 
    "localisation": { 
        "coordinates": [43.9507, 4.8075], 
@@ -119,7 +122,8 @@ Les index créent une copie d'un segment de votre donnée, parfois dans un ordre
        "coordinates": [43.944787, 4.804031], 
        "type": "Point" 
    } 
-}])```
+}])
+```
 
 
 
