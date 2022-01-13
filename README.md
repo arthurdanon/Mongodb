@@ -1,7 +1,8 @@
 ## Summary
 
+Intro
 
-1 - MongoDB sur Atlas
+1 - Création d'un espace MongoDB sur Atlas
 - Création de l'espace /création des droits
 - Création de la Database
 - Choix des serveur d'herbergemt
@@ -9,8 +10,13 @@
 - Création d'un acces utilisateur / Création d'un white list IP
 - Création d'un cluster
 - Choix de Connection au cluster 
-- Import de la BDD dans le cluster en shell
+
+2 - BDD
+- Import de la BDD dans le cluster via le shell
+
+3 - IDE
 - Affichage de la BDD via Compass
+- Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
 
 2 - index
 
@@ -24,9 +30,17 @@
 
 * - Connection de l'API a mongoDB
  
+ 
+ 
+#Intro
+Notre project consiste a rassembler les donnée personel de clients et créer par la suite un programme de fidelités pour un restaurant.
+- Pour le bien de notre project nous mettons en place une BDD sur mongodb.
+- Création des regles permetant la manipulation des données dans mongodb
+- Creation d'un Dashboard de visualisation et statistique des données avec une API "en cours(optionel)"
 
 
-# Création de l'espace Atlas MongoDB
+
+# Création d'un espace MongoDB sur Atlas
 - Création de l'espace / création des droits
 ![1](https://user-images.githubusercontent.com/65304878/149127230-9d180b9a-3d0f-4ea5-8da3-21fc9a6b531f.JPG)
 
@@ -48,11 +62,22 @@
 - Choix de Connection au cluster 
 ![7](https://user-images.githubusercontent.com/65304878/149128326-0fed2726-b53a-4320-9523-ce6fd93f198a.JPG)
 
+
+
+# BDD
 - Import de la BDD dans le cluster en shell
 ![8](https://user-images.githubusercontent.com/65304878/149128393-f68acd2f-c06e-4c24-a678-ebfc2f4dc99e.JPG)
 
+
+
+# IDE 
 - Affichage de la BDD via Compass
 ![9](https://user-images.githubusercontent.com/65304878/149128521-ac47c4d6-0445-46ee-9191-89da8a467374.JPG)
+- Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
+![10](https://user-images.githubusercontent.com/65304878/149346035-5a9fbb97-71f9-4d76-9eb1-4edc4b19f149.png)
+
+
+
 
 
 | Operator          |  Correspondance                         |
