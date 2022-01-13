@@ -194,10 +194,6 @@ db.boutique.insertMany([{
    } 
 }])
 ```
-```
-{ acknowledged: true,
-  insertedIds: 
-   { '0': ObjectId("61e0544d97d888e7415d5508"),
-     '1': ObjectId("61e0544d97d888e7415d5509"),
-     '2': ObjectId("61e0544d97d888e7415d550a") } }
-```
+![12](https://user-images.githubusercontent.com/65304878/149370589-15d1aeb2-a1d9-4e02-b719-dc70a2cd8a43.png)
+
+
