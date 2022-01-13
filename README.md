@@ -87,8 +87,12 @@ La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisin
 
 ## Index
 - Création d'un index
-L'index permetra d'acroitre la rapidité et la simplicité des requetes sur la BDD ex: ``Nom`` et ``prenom``<br>
-```db.clients.createIndex({"nom":1, "prenom":1})```
+Les index créent une copie d'un segment de votre donnée, parfois dans un ordre spécifique, dans votre base de données. Cela permet à MongoDB de pouvoir les parcourir de manière efficace pour vous retourner le ou les documents recherchés rapidement. *practicalprogramming.fr* ex: ``Nom`` et ``prenom``<br>
+```db.clients.createIndex({"nom":1, "prenom":1})```<br>
+![11](https://user-images.githubusercontent.com/65304878/149357573-43149aac-7f50-4f1a-974f-4238ba7db47b.png)
+
+
+
 
 
 
