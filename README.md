@@ -98,16 +98,27 @@ Les index créent une copie d'un segment de votre donnée, parfois dans un ordre
 
 - Opérateur
 
-| Operator          |  Correspondance                         |
-| :---------------  |:---------------                         |
-| $eq               | éguale à                                |
-| $gt               | plus grands que                         |
-| $lt               | plus petit que                          |
-| $gte              | plus grand ou éguale                    |
-| $lte              | plus petit ou éguale                    |
-| $in               | est contenue dans l'array suivant       |
-| $ne               | different de                            |
-| $lt               | n'est pas contenue dans l'array suivant |
+| Operator          |  Correspondance                             |
+| :---------------  |:---------------                             |
+| $eq               | éguale à                                    |
+| $gt               | plus grands que                             |
+| $lt               | plus petit que                              |
+| $gte              | plus grand ou éguale                        |
+| $lte              | plus petit ou éguale                        |
+| $in               | est contenue dans l'array suivant           |
+| $ne               | different de                                |
+| $lt               | n'est pas contenue dans l'array suivant     |
+
+| Commande          |  Correspondance                             |
+| :---------------  |:---------------                             |
+| .find             | rechercher dans un document                 |
+| .insert           | ajout dans un document                      |
+| .drop             | suprimer une collection                     |
+| .update           | actualiser les données d'un document        |
+| .updateMany       | actualiser les données de tous les documents|
+| .distinc          | rechercher une valeurs distinct             |
+| .count            | Compter le nombre d'éléments                |
+
 
 
 - Création de notre collection clients
