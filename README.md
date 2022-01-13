@@ -95,6 +95,20 @@ Les index créent une copie d'un segment de votre donnée, parfois dans un ordre
 
 
 ## Commande Mongodb
+
+- Opérateur
+| Operator          |  Correspondance                         |
+| :---------------  |:---------------                         |
+| $eq               | éguale à                                |
+| $gt               | plus grands que                         |
+| $lt               | plus petit que                          |
+| $gte              | plus grand ou éguale                    |
+| $lte              | plus petit ou éguale                    |
+| $in               | est contenue dans l'array suivant       |
+| $ne               | different de                            |
+| $lt               | n'est pas contenue dans l'array suivant |
+
+
 - Création de notre collection clients
 ```db.createCollection("clients")```
 
@@ -132,34 +146,3 @@ db.client.find({"prenom" : { $eq : "Arthur" }})
   prenom: 'Arthur',
   age: 20 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Opérateur
-
-| Operator          |  Correspondance                         |
-| :---------------  |:---------------                         |
-| $eq               | éguale à                                |
-| $gt               | plus grands que                         |
-| $lt               | plus petit que                          |
-| $gte              | plus grand ou éguale                    |
-| $lte              | plus petit ou éguale                    |
-| $in               | est contenue dans l'array suivant       |
-| $ne               | different de                            |
-| $lt               | n'est pas contenue dans l'array suivant |
-
-```code```
