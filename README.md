@@ -18,10 +18,12 @@
 - Affichage de la BDD via Compass
 - Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
 
-2 - Index
+4 - Index
 - Création d'un index
 
-6 - Operateur
+5 - Commande Mongodb
+
+
 
 7 - aggregation
 
@@ -90,6 +92,42 @@ La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisin
 Les index créent une copie d'un segment de votre donnée, parfois dans un ordre spécifique, dans votre base de données. Cela permet à MongoDB de pouvoir les parcourir de manière efficace pour vous retourner le ou les documents recherchés rapidement. *practicalprogramming.fr*<br>
 ```db.clients.createIndex({"nom":1, "prenom":1})```<br>
 ![11](https://user-images.githubusercontent.com/65304878/149357573-43149aac-7f50-4f1a-974f-4238ba7db47b.png)
+
+
+## Commande Mongodb
+-Création de notre collection clients
+```db.createCollection("clients")```
+
+-Création de documents
+```db.avignon.insertMany([{ 
+   "nom": "Palais des Papes", 
+   "localisation": { 
+       "coordinates": [43.9507, 4.8075], 
+       "type": "Point" 
+   } 
+}, 
+{ 
+   "nom": "Pont Saint-Bénézet", 
+   "localisation": { 
+       "coordinates": [43.95397, 4.80478], 
+       "type": "Point" 
+   } 
+}, 
+{ 
+   "nom": "Collection Lambert", 
+   "localisation": { 
+       "coordinates": [43.944787, 4.804031], 
+       "type": "Point" 
+   } 
+}])```
+
+
+
+
+
+
+
+
 
 
 
