@@ -22,8 +22,15 @@
 - Création d'un index
 
 5 - Commande Mongodb
+- Opérateurs
+- Création de notre collection clients
+- Création de documents
+- Find
+- Update
 
-
+6 - GeoJson
+- Utilisation
+- 
 
 7 - aggregation
 
@@ -157,4 +164,40 @@ db.client.find({"prenom" : { $eq : "Arthur" }})
   nom: 'Danon',
   prenom: 'Arthur',
   age: 20 }
+```
+
+## GeoJson
+- Utilisation
+Nous aurons besoin de GeoJson dans notre project pour afficher une carte avec toute nos boutique, mais aussi a etablir un plan de route pour des livreur ex *ubereat*.<br>
+Des études de marchés peuvent etre faite suivant les zone geographique des boutiques.
+
+```
+db.boutique.insertMany([{ 
+   "nom": "boutique1", 
+   "localisation": { 
+       "coordinates": [43.9507, 4.8075], 
+       "type": "Point" 
+   } 
+}, 
+{ 
+   "nom": "Boutique2", 
+   "localisation": { 
+       "coordinates": [43.95397, 4.80478], 
+       "type": "Point" 
+   } 
+}, 
+{ 
+   "nom": "Boutique3", 
+   "localisation": { 
+       "coordinates": [43.944787, 4.804031], 
+       "type": "Point" 
+   } 
+}])
+```
+```
+{ acknowledged: true,
+  insertedIds: 
+   { '0': ObjectId("61e0544d97d888e7415d5508"),
+     '1': ObjectId("61e0544d97d888e7415d5509"),
+     '2': ObjectId("61e0544d97d888e7415d550a") } }
 ```
