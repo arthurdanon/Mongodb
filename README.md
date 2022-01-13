@@ -121,12 +121,19 @@ db.client.updateMany({}, {$set: {"age":20}})
 ```
 
 - Find <br>
-*Cela permet de rechercher dans notre collection*
+*Cela permet de rechercher dans notre collection* ``$eq`` = ``===``
 ```
 db.client.find({"prenom" : { $eq : "Arthur" }})
 ```
 
-``$eq`` = ``===``
+```
+{ _id: ObjectId("61e0474e97d888e7415d5505"),
+  nom: 'Danon',
+  prenom: 'Arthur',
+  age: 20 }
+```
+
+
 
 
 
