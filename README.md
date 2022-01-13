@@ -40,7 +40,7 @@ Notre project consiste a rassembler les donnée personel de clients et créer pa
 - Creation d'un Dashboard de visualisation et statistique des données avec une API "en cours(optionel)"
 
 Nous créons une inscription automatique a chaque passage en boutique a un programme de fidelité.<br>
-Ce programme de fidélité recuperera : ``Nom``, ``Prenom``, ``Email``, ``Date de naissance``, ``Adresse``, ``Pays``, ``Ville``, ``Sexe``, ``Status social``.<br>
+Ce programme de fidélité recuperera : ``Nom``, ``Prenom``, ``Email``, ``Date de naissance``, ``Adresse``, ``Pays``, ``Ville``, ``Sexe``, ``Status social``.<br><br>
 Nous Stockerons dans notre BDD, chaque donnée de passage en boutique.<br>
 Les Passages en boutique recuperera : ``Date``, ``Articles achetés``, ``Prix total``, ``Categorie de produit``, ``Nombre de point généré``.
 
@@ -70,14 +70,15 @@ Les Passages en boutique recuperera : ``Date``, ``Articles achetés``, ``Prix to
 
 
 ## BDD
-*Cette BDD a été remplacé par le projet*
-- Import de la BDD dans le cluster en shell
+*Cette collection a été remplacé par la collection clients*
+- Import de la collection dans le cluster en shell
 La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisine``, ``grades``, ``name``, ``restaurant_id``
 ![8](https://user-images.githubusercontent.com/65304878/149128393-f68acd2f-c06e-4c24-a678-ebfc2f4dc99e.JPG)
 
 
 
 ## IDE 
+*Cette collection a été remplacé par le collection clients*
 - Affichage de la BDD via Compass
 ![9](https://user-images.githubusercontent.com/65304878/149128521-ac47c4d6-0445-46ee-9191-89da8a467374.JPG)
 - Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
@@ -86,7 +87,9 @@ La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisin
 
 ## Index
 - Création d'un index
-L'index permetra d'acroitre la rapidité des requetes sur la BDD
+L'index permetra d'acroitre la rapidité et la simplicité des requetes sur la BDD ex: ``Nom`` et ``prenom``<br>
+```db.clients.createIndex({"nom":1, "prenom":1})``
+
 
 
 
