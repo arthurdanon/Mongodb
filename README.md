@@ -2,7 +2,7 @@
 
 Intro
 
-1 - Création d'un espace MongoDB sur Atlas
+1 - MongoDB sur Atlas
 - Création de l'espace /création des droits
 - Création de la Database
 - Choix des serveur d'herbergemt
@@ -18,7 +18,8 @@ Intro
 - Affichage de la BDD via Compass
 - Ajout de l'extention Mongodb et connection a la BDD sur Visual studio code
 
-2 - index
+2 - Index
+- Création d'un index
 
 6 - Operateur
 
@@ -32,7 +33,7 @@ Intro
  
  
  
-#Intro
+# Intro
 Notre project consiste a rassembler les donnée personel de clients et créer par la suite un programme de fidelités pour un restaurant.
 - Pour le bien de notre project nous mettons en place une BDD sur mongodb.
 - Création des regles permetant la manipulation des données dans mongodb
@@ -66,6 +67,7 @@ Notre project consiste a rassembler les donnée personel de clients et créer pa
 
 # BDD
 - Import de la BDD dans le cluster en shell
+La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisine``, ``grades``, ``name``, ``restaurant_id``
 ![8](https://user-images.githubusercontent.com/65304878/149128393-f68acd2f-c06e-4c24-a678-ebfc2f4dc99e.JPG)
 
 
@@ -77,6 +79,9 @@ Notre project consiste a rassembler les donnée personel de clients et créer pa
 ![10](https://user-images.githubusercontent.com/65304878/149346035-5a9fbb97-71f9-4d76-9eb1-4edc4b19f149.png)
 
 
+# Index
+- Création d'un index
+L'index permetra d'acroitre la rapidité des requetes sur la BDD
 
 
 
