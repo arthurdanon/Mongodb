@@ -196,4 +196,47 @@ db.boutique.insertMany([{
 ```
 ![12](https://user-images.githubusercontent.com/65304878/149370589-15d1aeb2-a1d9-4e02-b719-dc70a2cd8a43.png)
 
+- Posibilité
+
+*Point*<br>
+```
+{
+   "type": "Point",   
+   "coordinates": [75, 15]
+}
+```
+*Ligne*<br>
+```
+{
+   "type": "LineString",    
+   "coordinates":
+   [
+       [10, 40], [10, 30], [20, 20]   
+   ]
+}
+```
+*Polygone*<br>
+```
+{
+  "type": "Polygon", 
+  "coordinates": 
+   [
+        [
+          [40, 20], [55, 75], [25, 20], [90, 10], [25, 40]  
+        ],
+        [
+          [30, 20], [55, 65], [10, 30], [10, 30] 
+        ]
+   ] 
+}
+```
+
+
+
+
+
+
+
+
+
 
