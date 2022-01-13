@@ -11,7 +11,7 @@
 - Création d'un cluster
 - Choix de Connection au cluster 
 
-2 - BDD**
+***2 - BDD**
 - Import de la BDD dans le cluster via le shell
 
 **3 - IDE**
@@ -36,12 +36,9 @@
 **7 - GeoJson**
 - Forme Possible
 
+**8- Création de l'interface**
 
-
-
-* - Création de l'interface 
-
-* - Connection de l'API a mongoDB
+**9 - Connection de l'API a mongoDB**
  
  
  
@@ -327,10 +324,14 @@ db.boutique.insertMany([{
 
 
 
+## Création de l'interface
+Pour notre project nous aurons besoin d'une interface web permettant de resistituer les données des clients et des boutiques.
+Cette interface serait utile pour créer des statistique en forme de graphique et pout tous simplement faire des requete simple/complexe avec un basic bouton sur une interface.
 
-
-
-
-
+Exemple:
+*rechercher tous les john et sortir leurs fiche de coohordoné*
+```
+db.clients.find({"prenom":"John"})
+```
 
 
