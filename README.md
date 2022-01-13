@@ -1,6 +1,6 @@
 # Summary
 
-Intro
+**INTRO** - Intro
 
 1 - MongoDB sur Atlas
 - Création de l'espace /création des droits
@@ -70,6 +70,7 @@ Les Passages en boutique recuperera : ``Date``, ``Articles achetés``, ``Prix to
 
 
 ## BDD
+* Cette BDD a été remplacé par le projet *
 - Import de la BDD dans le cluster en shell
 La collection db.restaurant contient par ID : ``Adresse``, ``borough``, ``cuisine``, ``grades``, ``name``, ``restaurant_id``
 ![8](https://user-images.githubusercontent.com/65304878/149128393-f68acd2f-c06e-4c24-a678-ebfc2f4dc99e.JPG)
