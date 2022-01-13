@@ -30,11 +30,10 @@
 
 6 - GeoJson
 - Utilisation
-- 
+- Posibilité
 
-7 - aggregation
+7 - Aggrégation
 
-8 - GeoJson
 
 * - Création de l'interface 
 
